@@ -17,6 +17,9 @@
 	
    <!-- android -->
     <platform name="android">
+        <source-file src="src/android/libadapterinmobi.jar" target-dir="libs" />		
+	
+		<!-- dependency -->	
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<activity android:name="com.inmobi.androidsdk.IMBrowserActivity"
 			    android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
@@ -50,14 +53,15 @@
 			<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
 			<uses-permission android:name="android.permission.READ_CALENDAR"/>
 			<uses-permission android:name="android.permission.WRITE_CALENDAR"/>
-          </config-file>
-          
+        </config-file>
         <source-file src="src/android/InMobi-4.5.1.jar" target-dir="libs" />
-        <source-file src="src/android/libadapterinmobi.jar" target-dir="libs" />		
      </platform>
 
      <!-- ios -->
      <platform name="ios">    
+	 	<source-file src="src/ios/libAdapterInMobi.a" framework="true"/>
+		
+		<!-- dependency -->
 		<header-file src="src/ios/InMobi.h"/>
 		<header-file src="src/ios/InMobiAnalytics.h"/>
 		<header-file src="src/ios/IMConstants.h"/>
@@ -85,8 +89,8 @@
 		<framework src="SystemConfiguration.framework" />
 		<framework src="libsqlite3.0.dylib" />
 		<framework src="libz.dylib" />
-		<source-file src="src/ios/libAdapterInMobi.a" framework="true"/>		 
 	</platform>
 	
-	<dependency id="com.cranberrygame.cordova.plugin.ad.admob" url="https://github.com/cranberrygame/cordova-plugin-ad-admob" commit="master" />
+	<!-- dependency -->
+	<dependency id="com.cranberrygame.cordova.plugin.ad.admob" url="https://github.com/cranberrygame/cordova-plugin-ad-admob" />
 </plugin>
