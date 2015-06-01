@@ -87,4 +87,6 @@
 		<framework src="libz.dylib" />
 		<source-file src="src/ios/libAdapterInMobi.a" framework="true"/>		 
 	</platform>
+	
+	<dependency id="com.cranberrygame.cordova.plugin.ad.admob" url="https://github.com/cranberrygame/cordova-plugin-ad-admob" commit="master" />
 </plugin>
